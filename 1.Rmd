@@ -1,0 +1,40 @@
+---
+title: "assignment 1 q1"
+author: "Yuxi Li"
+date: "2023-09-21"
+output:
+  pdf_document: default
+  html_document: default
+---
+this is the start of my question 1.
+```{r}
+load(file = "WAGE2.RData")
+
+```
+
+
+```{r}
+num_observations <- nrow(wages2)
+print(num_observations)
+
+```
+```{r}
+mean_age <- mean(wages2$age, na.rm = TRUE)
+print(mean_age)
+```
+
+```{r}
+sd_wage <- sd(wages2$wage, na.rm = TRUE)
+print(sd_wage)
+```
+
+```{r}
+avg_wage_less_than_three_years <- mean(wages2$wage[wages2$tenure < 3], na.rm = TRUE)
+print(avg_wage_less_than_three_years)
+```
+
+```{r}
+mean_experience_married <- mean(wages2$exper[wages2$married == 1], na.rm = TRUE)
+print(mean_experience_married)
+```
+
